@@ -7,17 +7,17 @@
  */
 int _myexit(info_t *info)
 {
-	int exitCode;
+	int exitchecks;
 
 	if (info->argv[1]) /* If there is an exit argument */
 	{
-		exitCode = _erratoi(info->argv[1]);
-		if (exitCode == -1)
+		exitchecks = _erratoi(info->argv[1]);
+		if (exitchecks == -1)
 		{
 			info->status = 2;
 			print_error(info, "Illegal number: ");
-			_err_puts(info->argv[1]);
-			_err_putchar('\n');
+			_error_puts(info->argv[1]);
+			_error_putchar('\n');
 			return (1);
 		}
 		info->err_num = _erratoi(info->argv[1]);
@@ -28,46 +28,46 @@ int _myexit(info_t *info)
 }
 
 /**
- * _cd - Change the current directory
+ * _mycd - Change the current directory
  * @info: Structure containing potential arguments. Used for the prototype
  * Return: Always return 0
  */
-int _cd(info_t *info)
+int _mycd(info_t *info)
 {
-	char *currentDir, *newDir, buffer[1024];
-	int chdirResult;
+	char *cdir, *ndir, buffer[1024];
+	int chdir_res;
 
-	currentDir = getcwd(buffer, 1024);
-	if (!currentDir)
+	cdir = getcwd(buffer, 1024);
+	if (!cdir)
 		_puts("TODO: >>getcwd failure emsg here<<\n");
 	if (!info->argv[1])
 	{
-		newDir = _getenv(info, "HOME=");
-		if (!newDir)
-			chdirResult = /* TODO: what should this be? */
-				chdir((newDir = _getenv(info, "PWD=")) ? newDir : "/");
+		ndir = _getenv(info, "HOME=");
+		if (!ndir)
+			chdir_res = /* TODO: what should this be? */
+				chdir((ndir = _getenv(info, "PWD=")) ? ndir : "/");
 		else
-			chdirResult = chdir(newDir);
+			chdir_res = chdir(ndir);
 	}
 	else if (_strcmp(info->argv[1], "-") == 0)
 	{
 		if (!_getenv(info, "OLDPWD="))
 		{
-			_puts(currentDir);
+			_puts(cdir);
 			_putchar('\n');
 			return (1);
 		}
 		_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
-		chdirResult = /* TODO: what should this be? */
-			chdir((newDir = _getenv(info, "OLDPWD=")) ? newDir : "/");
+		chdir_res = /* TODO: what should this be? */
+			chdir((ndir = _getenv(info, "OLDPWD=")) ? ndir : "/");
 	}
 	else
-		chdirResult = chdir(info->argv[1]);
-	if (chdirResult == -1)
+		chdir_res = chdir(info->argv[1]);
+	if (chdir_res == -1)
 	{
 		print_error(info, "can't cd to ");
-		_err_puts(info->argv[1]);
-		_err_putchar('\n');
+		_error_puts(info->argv[1]);
+		_error_putchar('\n');
 	}
 	else
 	{

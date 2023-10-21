@@ -117,8 +117,8 @@ char *find_cmd_path(info_t *, char *, char *);
 
 int loophsh(char **);
 
-void _err_puts(char *);
-int _err_putchar(char);
+void _error_puts(char *);
+int _error_putchar(char);
 int _write_to_fd(char c, int fd);
 int writes_str_to_fd(char *str, int fd);
 
@@ -157,7 +157,7 @@ char *convert_num_to_str(long int, int, int);
 void remove_comments(char *);
 
 int _myexit(info_t *);
-int _cd(info_t *);
+int _mycd(info_t *);
 int _help(info_t *);
 
 int _history(info_t *);
@@ -205,4 +205,4 @@ int rep_alias(info_t *);
 int rep_vars(info_t *);
 int rep_str(char **, char *);
 
-#endif /* SHELL_H */
+#endif
