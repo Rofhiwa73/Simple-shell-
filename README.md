@@ -1,5 +1,26 @@
-0x16. C - Simple Shell
+Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
+General
+Who designed and implemented the original Unix operating system
+Who wrote the first version of the UNIX shell
+Who invented the B programming language (the direct predecessor to the C programming language)
+Who is Ken Thompson
+How does a shell work
+What is a pid and a ppid
+How to manipulate the environment of the current process
+What is the difference between a function and a system call
+How to create processes
+What are the three prototypes of main
+How does the shell use the PATH to find the programs
+How to execute another program with the execve system call
+How to suspend the execution of a process until one of its children terminates
+What is EOF / “end-of-file”?
+Copyright - Plagiarism
+You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
+You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
+You are not allowed to publish any content of this project.
+Any form of plagiarism is strictly forbidden and will result in removal from the program.
 Requirements
 General
 Allowed editors: vi, vim, emacs
@@ -99,14 +120,16 @@ The Checker will be released at the end of the project (1-2 days before the dead
 Tasks
 0. Betty would be proud
 mandatory
+Score: 0.0% (Checks completed: 0.0%)
 Write a beautiful code that passes the Betty checks
 
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 1. Simple shell 0.1
 mandatory
+Score: 0.0% (Checks completed: 0.0%)
 Write a UNIX command line interpreter.
 
 Usage: simple_shell
@@ -150,18 +173,20 @@ env-environ.c  exec    fork    mypid   ppid   printenv  promptc  shell     stat 
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 2. Simple shell 0.2
 mandatory
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.1 +
 
 Handle command lines with arguments
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 3. Simple shell 0.3
 mandatory
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.2 +
 
 Handle the PATH
@@ -185,9 +210,10 @@ julien@ubuntu:~/shell$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 4. Simple shell 0.4
 mandatory
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.3 +
 
 Implement the exit built-in, that exits the shell
@@ -196,9 +222,10 @@ You don’t have to handle any argument to the built-in exit
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 5. Simple shell 1.0
 mandatory
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.4 +
 
 Implement the env built-in, that prints the current environment
@@ -221,9 +248,10 @@ julien@ubuntu:~/shell$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 6. Simple shell 0.1.1
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.1 +
 
 Write your own getline function
@@ -236,18 +264,20 @@ be able to move the cursor
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 7. Simple shell 0.2.1
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.2 +
 
 You are not allowed to use strtok
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 8. Simple shell 0.4.1
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 0.4 +
 
 handle arguments for the built-in exit
@@ -260,9 +290,10 @@ julien@ubuntu:~/shell$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 9. setenv, unsetenv
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Implement the setenv and unsetenv builtin commands
@@ -278,9 +309,10 @@ Should print something on stderr on failure
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 10. cd
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Implement the builtin command cd:
@@ -295,9 +327,10 @@ man chdir, man getcwd
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 11. ;
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Handle the commands separator ;
@@ -319,9 +352,10 @@ alex@~$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 12. && and ||
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Handle the && and || shell logical operators
@@ -360,9 +394,10 @@ alex@~$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 13. alias
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Implement the alias builtin command
@@ -373,9 +408,10 @@ alias name='value' [...]: Defines an alias for each name whose value is given. I
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 14. Variables
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Handle variables replacement
@@ -395,9 +431,10 @@ julien@ubuntu:~/shell$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 15. Comments
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Handle comments (#)
@@ -409,9 +446,10 @@ julien@ubuntu:~/shell$
 Repo:
 
 GitHub repository: simple_shell
-  
+    
 16. File as input
 #advanced
+Score: 0.0% (Checks completed: 0.0%)
 Simple shell 1.0 +
 
 Usage: simple_shell [filename]
@@ -422,4 +460,5 @@ In this mode, the shell should not print a prompt and should not read from stdin
 Repo:
 
 GitHub repository: simple_shell
-  
+    
+
