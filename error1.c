@@ -40,13 +40,13 @@ int _erratoi(char *s)
  */
 void print_error(info_t *info, char *errorType)
 {
-	_err_puts(info->fname);
-	_err_puts(": ");
+	_error_puts(info->fname);
+	_error_puts(": ");
 	print_decimal(info->line_count, STDERR_FILENO);
-	_err_puts(": ");
-	_err_puts(info->argv[0]);
-	_err_puts(": ");
-	_err_puts(errorType);
+	_error_puts(": ");
+	_error_puts(info->argv[0]);
+	_error_puts(": ");
+	_error_puts(errorType);
 }
 
 /**

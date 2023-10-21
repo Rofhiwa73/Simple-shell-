@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * _err_puts - Prints an input string to stderr.
+ * _error_puts - Prints an input string to stderr.
  * @str: The string to be printed
  *
  * This function prints the string @str to the standard error stream.
  */
-void _err_puts(char *str)
+void _error_puts(char *str)
 {
 	int i = 0;
 
@@ -14,7 +14,7 @@ void _err_puts(char *str)
 		return;
 	while (str[i] != '\0')
 	{
-		_err_putchar(str[i]);
+		_error_putchar(str[i]);
 		i++;
 	}
 }
@@ -32,7 +32,7 @@ int _mysetenv(info_t *info)
 {
 	if (info->argc != 3)
 	{
-		_err_puts("Incorrect number of arguments\n");
+		_error_puts("Incorrect number of arguments\n");
 		return (1);
 	}
 	if (_setenv(info, info->argv[1], info->argv[2]))
@@ -52,7 +52,7 @@ int _myunsetenv(info_t *info)
 
 	if (info->argc == 1)
 	{
-		_err_puts("Too few arguments.\n");
+		_error_puts("Too few arguments.\n");
 		return (1);
 	}
 	for (i = 1; i <= info->argc; i++)

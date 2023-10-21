@@ -46,7 +46,7 @@ int print_decimal(int number, int fd)
 	unsigned int absoluteValue, current;
 
 	if (fd == STDERR_FILENO)
-		putCharFunction = _err_putchar;
+		putCharFunction = _error_putchar;
 	if (number < 0)
 	{
 		absoluteValue = -number;
